@@ -1,0 +1,19 @@
+QINSERT (Q, F, R, MAX, Value) 
+1. [Overflow?] If f==0 and R = MAX-1 then Write (‘Overflow’)
+Return
+2. [IF queue is empty initialise it]
+If (F=-1 and R=-1) -> F=R=0
+3. [Otherwise]
+R=R+1
+4. [insert the element]
+Q[R]=Value 
+return
+ 
+QDELETE (Q, F, R)
+1. [Underflow?] If F = -1 then Write (‘Underflow’)
+Return (0) (‘0’ denotes an empty queue)
+2. [Queue empty?]
+If F = R then F = R = 0
+else F = F + 1 (Increment front pointer)
+4. [Return element]
+Return 
