@@ -1,0 +1,37 @@
+CQINSERT (F, R, Q, Value, MAX)
+1. [Check for overflow]
+If(F=0 and R=MAX-1) or F=R -> write ('overflow')
+return
+2. [Otherwise]
+If (F=-1) then -> F=R=0
+3. [Else]
+If (R=MAX-1) ->R=0
+Else
+R=R+1
+4. [Insert]
+Q[R]=Value
+
+
+CQDELETE (F, R, Q, Value) 
+1. [Underflow?] If F = 0 or F=-1 then Write (‘Underflow’)
+Return (0)
+2. [Delete element]
+If (F=R) -> F=R=-1
+3. [Else] 
+If F=MAX-1 -> F=0 
+4. [Else] 
+F=F+1 -> write ('Deleted')
+
+CQDISPLAY(Pos, F, R, Q)
+1. [Set the position of F and R]
+FPos=F
+RPos=R
+2. [Check for Empty]
+If F=-1 -> write ('Empty')
+3. [Otherwise]
+If (FPos <= RPos)
+While(FPos<=RPos) -> write Value=Q[FPo] and FPos=FPos+1
+4. [Else] While(FPos <= MAX-1) -> write Value=Q[FPos] and FPos=FPos+1
+5. [otherwise] 
+FPos=0
+while(FPos <= RPos) -> write Value=Q[FPos] and FPos=FPos+1
